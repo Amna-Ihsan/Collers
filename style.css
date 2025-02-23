@@ -1,0 +1,1044 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  font-size: 16px;
+  background-color: #ffffe0;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+
+  width: 100%;
+  position: fixed;
+  padding: 0px 20px;
+  top: 0;
+  z-index: 30;
+  background-color: #ffffe0;
+}
+
+.headerDiv {
+  padding: 20px;
+  font-size: 20px;
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: auto;
+}
+
+#logo_name {
+  font-weight: 900;
+  font-size: x-large;
+
+  color: #800000;
+}
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+
+  align-items: center;
+  gap: 20px;
+}
+nav a {
+  color: #800000;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+/* menu */
+
+.dropbtn {
+  position: relative;
+  outline: none;
+  background-color: transparent;
+  display: none;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 10px;
+  background: transparent;
+  width: 70px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffe0;
+  width: 100vw;
+  top: 0;
+  right: 0;
+  border-radius: 10px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  text-align: center;
+  padding: 20px 0px;
+  font-size: large;
+  font-weight: bolder;
+
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+/* hero section */
+.hero {
+  padding: 50px;
+  margin-top: 70px;
+  position: relative; /* This creates a new stacking context for child elements */
+  width: 100%;
+
+  overflow: hidden; /* Ensures no overflow of the triangle outside the hero section */
+}
+
+.triangle-right {
+  position: absolute;
+  bottom: 0; /* Position the triangle at the bottom of the hero section */
+  right: 0;
+
+  height: 0;
+  border-top: 600px solid transparent; /* Height of the triangle */
+  border-right: 100vw solid #fef3c7; /* Full width of the viewport, color of the triangle */
+  z-index: 1; /* Triangle should be behind hero-col */
+}
+
+.hero-col {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Make sure z-index works here */
+  z-index: 10; /* Higher than triangle to bring it to the front */
+}
+
+.hero-col1 {
+  display: flex;
+
+  align-items: center;
+}
+.hero-heading {
+  padding: 10px 60px;
+}
+.hero-heading h1 {
+  font-size: 60px;
+
+  padding: 10px;
+}
+.hero-heading p {
+  padding: 10px;
+}
+.hero-buttons {
+  padding: 10px;
+}
+.signUp {
+  padding: 7px 15px;
+  background: transparent;
+  border: none;
+  border: 1px solid #800000;
+  border-radius: 10px;
+  margin: 5px;
+  font-weight: bold;
+  color: #800000;
+  width: 150px;
+}
+.signUp:hover {
+  background-color: #800000;
+  color: whitesmoke;
+}
+#watchDemo {
+  padding: 7px 15px;
+  margin: 5px;
+  background: transparent;
+  border: none;
+  color: #800000;
+  border-radius: 10px;
+  font-weight: bold;
+}
+#watchDemo:hover {
+  border: 1px solid #800000;
+  transition: 0.3s;
+}
+.heroImgDiv {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.heroImg {
+  position: relative;
+  width: 250px;
+
+  height: 250px;
+  background-color: #fbbf24;
+
+  border-radius: 30px;
+  max-width: 100%;
+}
+.heroImg img {
+  position: absolute;
+  top: -20px;
+  left: -30px;
+
+  max-width: 300px;
+}
+.hero-col2 {
+  margin-top: 50px;
+
+  display: flex;
+}
+.hero-col2-row {
+  max-width: 400px;
+
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: auto;
+}
+.hero-col2-row-div1 {
+  padding: 15px 5px;
+}
+.hero-col2-row h2,
+.hero-col2-row span {
+  padding: 10px;
+}
+
+.rectangelRow {
+  position: relative;
+}
+.rectangelRow i {
+  position: absolute;
+  top: -35px;
+  left: -40px;
+  font-size: 40px;
+  color: #800000;
+}
+.section2 {
+  background-color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+
+  color: white;
+  padding: 50px;
+
+  width: 100%;
+}
+
+.best {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+.best h1 {
+  font-size: 2rem;
+}
+.best button {
+  border: 1px solid white;
+  background: transparent;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  width: 150px;
+}
+.best-card {
+  /* border: 1px solid red; */
+  position: relative;
+
+  margin: 50px 0px;
+  width: 100%;
+}
+.row {
+  position: relative;
+  display: flex;
+
+  justify-content: space-around;
+  z-index: 7;
+  padding: 10px;
+}
+.column {
+  float: left;
+  width: 29.5%;
+  margin: 16px 0px;
+  border-radius: 20px;
+  background-color: #0f172a;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(219, 214, 214, 0.2);
+  border-radius: 10px;
+  z-index: 7;
+}
+.card img {
+  margin-bottom: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.container {
+  padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  padding: 10px 0px;
+}
+.card p {
+  padding: 10px 0px;
+  line-height: 1.5;
+  font-size: large;
+}
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  margin: 10px 0px;
+  border-radius: 10px;
+  font-size: large;
+}
+.button i {
+  margin-right: 20px;
+}
+.button:hover {
+  background-color: #555;
+}
+
+.backBoxes {
+  z-index: 0.1;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+.box1 {
+  width: 270px;
+  position: absolute;
+  top: 200px;
+  height: 270px;
+  background-color: #be185d;
+  border-radius: 40px;
+}
+.box2 {
+  width: 160px;
+  height: 160px;
+  background-color: #0369a1;
+  border-radius: 40px;
+  position: absolute;
+  left: 30%;
+}
+.box3 {
+  width: 130px;
+  height: 130px;
+  background-color: #b45309;
+  border-radius: 40px;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+}
+.box4 {
+  width: 200px;
+  height: 200px;
+  background-color: #a21caf;
+  border-radius: 40px;
+  position: absolute;
+  top: 300px;
+  left: 70%;
+}
+.box5 {
+  width: 230px;
+  height: 230px;
+  background-color: #15803d;
+  border-radius: 40px;
+  position: absolute;
+  top: 70px;
+  right: 0;
+}
+.joinSection {
+  padding: 100px 50px;
+
+  width: 100%;
+}
+.joinDiv {
+  position: relative;
+  border-radius: 30px;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.joinDiv1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.joinDiv1 h1 {
+  font-size: 40px;
+}
+
+.joinpara {
+  display: flex;
+  flex-direction: column;
+}
+.joinpara p {
+  padding: 10px;
+}
+.joinDiv1 p i {
+  color: #15803d;
+  margin-right: 7px;
+}
+.joinDiv1 button {
+  margin: 10px 0px;
+}
+.joinDiv2 {
+  width: 50%;
+}
+.joinDiv2 img {
+  width: 100%;
+}
+.section4 {
+  padding: 30px;
+}
+.Because {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+.Because h1 {
+  font-size: 3rem;
+}
+.LoveArrowDiv {
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.LoveArrowDiv i {
+  border: 1px solid #800000;
+  color: #800000;
+  cursor: pointer;
+  background: transparent;
+
+  padding: 10px;
+  border-radius: 50%;
+}
+.section4 .card {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #fde68a;
+}
+.card .column {
+  background-color: white;
+  padding: 20px;
+}
+.section5 {
+  padding: 50px;
+}
+.Collection_h1p {
+  padding: 30px 20px;
+}
+.section5 h1 {
+  font-size: 3rem;
+  padding: 10px;
+}
+.section5 p {
+  font-size: larger;
+  padding: 10px;
+}
+.section5-rowDiv {
+  display: flex;
+}
+.section5-Links {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.section5-Links a {
+  width: 200px;
+  max-width: 100%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+}
+.section5-Links a:hover {
+  box-shadow: 2px 2px grey;
+  background-color: whitesmoke;
+}
+
+.section5-Links a i {
+  margin: 0px 8px;
+}
+.section5-ImgDiv {
+  margin: auto;
+  width: 70%;
+
+  position: relative;
+}
+.section5-ImgDiv1,
+.section5-ImgDiv2 {
+  background-color: white;
+  padding: 0px 10px;
+  border-radius: 10px;
+}
+
+.section5-ImgDiv img {
+  width: 100%;
+}
+.section5-ImgDiv1 {
+  position: relative;
+
+  width: 60%;
+  max-width: 100%;
+  height: auto;
+}
+.section5-ImgDiv2 {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  width: 60%;
+  max-width: 100%;
+  left: 100px;
+  height: auto;
+}
+.section5-ImgDiv2 img {
+  width: 100%;
+  height: 100%;
+}
+.section5-ImgDiv3 {
+  border-radius: 10px;
+  background-color: white;
+  padding: 5px;
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  width: 30%;
+  height: 80%;
+}
+.section5-ImgDiv3 img {
+  width: 100%;
+  height: 100%;
+}
+.section6 {
+  height: auto;
+  background: #78350f url("map.svg") no-repeat center center;
+
+  padding: 50px;
+}
+.mapImgDiv {
+  padding-left: 100px;
+  margin: 50px 0px;
+}
+.section6 img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 20px;
+  background-color: white;
+  padding: 5px;
+}
+.section6 p {
+  padding: 10px;
+  background-color: gray;
+  width: 400px;
+  text-align: center;
+  max-width: 100%;
+}
+.map-CentreText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.map-CentreText h1 {
+  color: white;
+  font-size: 40px;
+  padding: 5px;
+}
+.map-CentreText h2 {
+  color: white;
+  padding: 5px;
+
+  font-size: 25px;
+}
+.section7 {
+  padding: 50px;
+  background-color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+.articles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+.articles h1 {
+  font-size: 3rem;
+}
+.articles_link {
+  padding: 10px;
+  color: #800000;
+}
+
+.articles_link i {
+  margin-left: 10px;
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+div.desc {
+  padding: 15px;
+ 
+}
+
+.desc h4 {
+  padding: 10px;
+ 
+
+}
+.desc p {
+  padding: 10px;
+}
+.desc button {
+  padding: 10px;
+  margin: 20px 0px 10px 0px;
+  background: transparent;
+  color: #800000;
+  border: none;
+}
+.desc button i {
+  margin-left: 10px;
+}
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Section 8 */
+/* Default styles for desktop */
+.section8{
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.events-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.events-cards .card {
+  flex: 1 1 22%; /* 4 cards in one row */
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  
+}
+.events-cards .card:hover{
+border: 1px solid gray;
+}
+.events-cards .card img {
+  width: 100%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.events-cards .card button {
+  padding: 10px;
+  margin: 20px 0px 10px 0px;
+  background: transparent;
+  color: #800000;
+  border: none;
+}
+
+
+.events-cards .card button i {
+  margin-left: 10px;
+}
+/* Footer */
+footer{
+  height: auto;
+  width: 100%;
+  background-color:#0F172A ;
+  color: white;
+  padding: 50px;
+  
+}
+.footer_Sneakers{
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+.footer_Sneakers h1{
+  font-size:40px;
+}
+.footer_Sneakers button{
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.footer_Sneakers button:hover{
+  background-color: white;
+  color: black;
+  transition: 0.2s linear;
+}
+
+.footer_rowDiv{
+  
+  padding: 30px 0px;
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-between;
+/* width: 85%; */
+}
+.footer_col{
+ 
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px 0px;
+  
+}
+.footer_col h4{
+  padding: 7px;
+}
+.footer_col a{
+  padding: 7px ;
+  color: white;
+}
+
+.footer_lastDiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.footer_lastDiv a{
+  color: white;
+}
+.footer_lastDiv a{
+
+  margin: 10px; 
+ 
+}
+.footer_lastDiv a i{
+  margin-right: 10px;
+}
+/* Styles for screens with max width 1024px */
+@media (max-width: 1024px) {
+  .events-cards .card {
+    flex: 1 1 48%; /* 2 cards in one row */
+  }
+}
+
+/* Styles for screens with max width 550px */
+@media (max-width: 550px) {
+  .events-cards {
+    flex-direction: column; /* Cards in column direction */
+  }
+
+  .events-cards .card {
+    flex: 1 1 100%; /* 1 card in one row */
+  }
+}
+
+@media (max-width: 1024px) {
+  .headerDiv {
+    width: 100%;
+  }
+  .box1,
+  .box2,
+  .box3,
+  .box4,
+  .box5 {
+    position: static;
+    margin: 10px;
+  }
+  .row {
+    padding: 30px 10px;
+  }
+  .section5-Links {
+    width: 40%;
+  }
+  .section5-ImgDiv {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-header {
+    width: 100%;
+  }
+  .nav {
+    display: none;
+  }
+
+  .dropbtn {
+    display: block !important;
+  }
+  .hero-col1 {
+    flex-direction: column;
+  }
+  .hero-heading {
+    padding: 0;
+    width: 100%;
+  }
+
+  .heroImgDiv {
+    width: 100%;
+    margin-top: 30px;
+    justify-content: center;
+  }
+  .section2 {
+    padding: 50px;
+  }
+
+  .best button {
+    margin: 20px 0px;
+  }
+  .cards {
+    width: 100%;
+  }
+  .row {
+    flex-direction: column;
+    padding: 30px;
+  }
+  .column {
+    width: 100%;
+  }
+  .joinSection {
+    padding: 10px;
+  }
+  .joinDiv {
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+  }
+  .joinDiv1 {
+    padding: 10px;
+    text-align: center;
+  }
+  .joinDiv1 button {
+    margin: 10px 0px;
+    margin: auto;
+  }
+  .joinDiv1,
+  .joinDiv2 {
+    width: 100%;
+  }
+  .LoveArrowDiv {
+    display: none;
+    justify-content: center;
+    text-align: center;
+  }
+  .section4 {
+    padding: 10px;
+  }
+  .section4 h1 {
+    font-size: 2rem;
+  }
+  .section5-rowDiv {
+    flex-direction: column;
+  }
+  .section5-Links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .section5 {
+    padding: 10px;
+  }
+  .section5-ImgDiv {
+    margin: 10px 0px;
+    width: 100%;
+  }
+  .mapImgDiv {
+    padding: 0;
+  }
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+
+  .footer_Sneakers{
+    flex-direction: column;
+    text-align: center
+  }
+  .footer_Sneakers h1{
+    margin: 20px 0px;
+      }
+  .footer_Sneakers button{
+margin: 20px 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+@media (max-width: 550px) {
+  .hero-col1 {
+    text-align: center;
+  }
+
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .hero-heading p {
+    text-align: center;
+  }
+  .heroImgDiv {
+    width: 100%;
+  }
+  .hero-col2 {
+    flex-direction: column;
+  }
+  .hero-col2-row {
+    margin-top: 10px;
+    text-align: center;
+    align-items: center;
+  }
+  .section2 {
+    padding: 30px 10px;
+  }
+  .best {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .row {
+    padding: 0;
+  }
+
+  .joinDiv {
+    flex-direction: column;
+  }
+  .section5-Links a {
+    width: 100%;
+  }
+  .section7{
+    padding: 50px 10px;
+  }
+  .articles{
+    flex-direction: column;
+  }
+  .articles button{
+    margin: 10px ;
+  }
+  .responsive {
+    width: 100%;
+  }
+  .section8{
+    padding: 20px;
+  }
+  .section8 .articles{
+    flex-direction: column;
+  }
+  .section8 .articles h1{
+    margin: 10px 0px;
+  }
+  footer{
+    padding: 20px;
+  }
+  .footer_Sneakers h1{
+    font-size: 30px;
+  }
+  .footer_rowDiv{
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer_lastDiv{
+    flex-direction: column;
+  }
+  .footer_lastDiv small{
+    margin: 10px 0px;
+  }
+}
+
